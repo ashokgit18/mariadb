@@ -11,7 +11,7 @@ pipeline {
     stage('deploy mariadb') {
             steps {
                sh '''cd $WORKSPACE
-                   helm upgrade --install devops18-mariadb maridb --namespace mariadb --values mariadb/createat-mariadb.yaml'''
+                   helm upgrade --install devops18-mariadb maridb --namespace $WORKSPACE/mariadb --values $WORKSPACE/mariadb/createat-mariadb.yaml'''
             }
         }
     stage('verification') {
