@@ -16,7 +16,7 @@ pipeline {
         }
     stage('verification') {
             steps {
-                sh 'kubectl get po -n mariadb '
+                sh 'kubectl get po -n database '
             }
         }
     
